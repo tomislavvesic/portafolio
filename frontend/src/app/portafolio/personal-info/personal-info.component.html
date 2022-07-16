@@ -1,0 +1,60 @@
+<ng-container *ngIf="screenInLargeMode;else midSmallView">
+    <div class="row">
+        <div class="col-4">
+            <img class="img-fluid rounded" style="max-width: 100px;"
+                src="/assets/images/GitHub-Mark-Light-120px-plus.png">
+        </div>
+        <div class="col-8 pt-1 align-self-center">
+            <h4>Tomislav Vesic</h4>
+            <h6>Software engineer</h6>
+        </div>
+    </div>
+    <hr>
+    <div class="text-start">
+        <h6>Personal Info</h6>
+        <div class="row">
+            <div class="col-5">
+                <p>Address</p>
+            </div>
+            <div class="col-7">
+                <p>Ante Mandica 37</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="text-start">
+        <h6>Programming Languages</h6>
+        <div class="row">
+            <div class="col-5">
+                <p>Python</p>
+            </div>
+            <div class="col-7">
+                <p>bar</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="text-start">
+        <h6>Other Skills</h6>
+        <div class="row">
+            <div class="col-5">
+                <p>English</p>
+            </div>
+            <div class="col-7">
+                <p>bar</p>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<ng-template #midSmallView>
+    <div class="row">
+        <div class="col-4 pe-0">
+            <img class="img-fluid img-thumbnail" src="/assets/images/GitHub-Mark-Light-120px-plus.png">
+        </div>
+        <div class="col-8 pt-1 align-self-center">
+            <h6>Tomislav Kesic</h6>
+        </div>
+    </div>
+    <p>test</p>
+</ng-template>
