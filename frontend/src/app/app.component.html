@@ -1,6 +1,6 @@
-<div id="particles-js" class="w-100 header-particles">
-
-</div>
 <div class="app-container">
-    <router-outlet></router-outlet>
+    <div id="particles-js" class="w-100 header-particles"></div>
+    <div [ngClass]="bodyColor">
+        <router-outlet></router-outlet>
+    </div>
 </div>

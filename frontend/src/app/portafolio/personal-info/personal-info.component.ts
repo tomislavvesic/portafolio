@@ -48,13 +48,6 @@ export class PersonalInfoComponent implements OnInit {
       name: 'English',
       skill: 50
     }]
-    // console.log(this.data)
-    // this.data = this.http.get('http://127.0.0.1:5000/portofolio');
-    // console.log(this.data)
-    // console.log(typeof (this.data))
-    // this.data.subscribe((test: any) => {
-    //   console.log(test)
-    // })
   }
 
   @HostListener('window:resize', ['$event'])

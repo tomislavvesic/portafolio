@@ -13,12 +13,4 @@ export class PortafolioComponent implements OnInit {
   ngOnInit(): void {
     null
   }
-
-  choosePortfolioInfoColor() {
-    return 'color-info-mode-dark'
-  }
-
-  choosePortfolioBodyColor() {
-    return 'color-body-mode-dark'
-  }
 }

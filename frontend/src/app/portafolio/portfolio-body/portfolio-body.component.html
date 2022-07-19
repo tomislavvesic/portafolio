@@ -1,6 +1,7 @@
 <div class="portfolio-body h-100">
-    <nav class="navbar mb-4" [ngClass]="chooseHeaderMode()">
+    <nav class="portfolio-body-nav navbar mb-4">
         <div class="container-fluid">
+            <!-- must be here to float other components to right side -->
             <p></p>
             <form class="d-flex">
                 <button type='button' class="btn me-2" (click)="onLoadInfo()">Info</button>
@@ -9,7 +10,7 @@
             </form>
         </div>
     </nav>
-    <div>
+    <div class="portfolio-body-tabs">
         <app-portfolio-info *ngIf="displayInfo"></app-portfolio-info>
         <app-portafolio-projects *ngIf="displayProjects"></app-portafolio-projects>
         <app-portfolio-contact *ngIf="displayContacts"></app-portfolio-contact>

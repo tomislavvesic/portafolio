@@ -1,5 +1,5 @@
 <ng-container *ngIf="screenInLargeMode;else midSmallView">
-    <div class="info-container">
+    <div class="personal-info">
         <div class="row">
             <div class="col-4">
                 <img class="img-fluid rounded" src="/assets/images/GitHub-Mark-Light-120px-plus.png">
@@ -79,13 +79,15 @@
 </ng-container>
 
 <ng-template #midSmallView>
-    <div class="row">
-        <div class="col-4 pe-0">
-            <img class="img-fluid img-thumbnail" src="/assets/images/GitHub-Mark-Light-120px-plus.png">
+    <div class="personal-info">
+        <div class="row">
+            <div class="col-4 pe-0">
+                <img class="img-fluid img-thumbnail" src="/assets/images/GitHub-Mark-Light-120px-plus.png">
+            </div>
+            <div class="col-8 pt-1 align-self-center">
+                <h6>Tomislav Kesic</h6>
+            </div>
         </div>
-        <div class="col-8 pt-1 align-self-center">
-            <h6>Tomislav Kesic</h6>
-        </div>
+        <p>test</p>
     </div>
-    <p>test</p>
 </ng-template>

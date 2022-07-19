@@ -32,9 +32,4 @@ export class PortafolioHeaderComponent implements OnInit {
     this.displayProjects = false;
     this.displayContacts = true;
   }
-
-  chooseHeaderMode() {
-    return 'color-header-mode-dark'
-  }
-
 }

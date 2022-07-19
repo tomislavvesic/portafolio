@@ -1,7 +1,8 @@
 import { AfterContentInit, Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import data from "./../assets/data/particles.json"
 
-import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 declare var particlesJS: any;
 @Component({
@@ -10,19 +11,23 @@ declare var particlesJS: any;
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, AfterContentInit {
+  bodyColor: string = 'color-mode-white'
 
-  constructor(public router: Router) { }
+  constructor(public router: Router, private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.chooseBodyColor()
     this.router.navigate(['portofolio']);
-
-  }
-
-  ngAfterContentInit(): void {
     particlesJS('particles-js', data, () => { console.log('callback - particles.js config loaded') });
   }
 
+  ngAfterContentInit(): void {
+    // particlesJS('particles-js', data, () => { console.log('callback - particles.js config loaded') });
+    null
+  }
+
+
   chooseBodyColor() {
-    return 'color-mode-dark'
+    this.bodyColor = 'color-mode-dark'
   }
 }

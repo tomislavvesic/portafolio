@@ -4,34 +4,20 @@
     margin-top: 9vh;
     margin-bottom: 16vh;
     border-radius: 10px;
+    z-index: 100;
 
-    .personal-info {
+    .personal-info-container {
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
         overflow: auto;
     }
 
-    .portfolio-body {
+    .portfolio-body-container {
         border-bottom-right-radius: 15px;
         overflow-y: auto;
         overflow-x: hidden;
     }
 
-    .color-info-mode-white {
-        background-color: white;
-    }
-
-    .color-info-mode-dark {
-        color: #fff;
-        background-color: #222;
-        border: inset 1px white;
-    }
-
-    .color-body-mode-dark {
-        color: white;
-        background-color: #333;
-        border: inset 1px white;
-    }
 
     /* -------- scrollbar decorators -------- */
     ::-webkit-scrollbar {
