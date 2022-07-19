@@ -1,49 +1,80 @@
 <ng-container *ngIf="screenInLargeMode;else midSmallView">
-    <div class="row">
-        <div class="col-4">
-            <img class="img-fluid rounded" style="max-width: 100px;"
-                src="/assets/images/GitHub-Mark-Light-120px-plus.png">
-        </div>
-        <div class="col-8 pt-1 align-self-center">
-            <h4>Tomislav Vesic</h4>
-            <h6>Software engineer</h6>
-        </div>
-    </div>
-    <hr>
-    <div class="text-start">
-        <h6>Personal Info</h6>
+    <div class="info-container">
         <div class="row">
-            <div class="col-5">
-                <p>Address</p>
+            <div class="col-4">
+                <img class="img-fluid rounded" src="/assets/images/GitHub-Mark-Light-120px-plus.png">
             </div>
-            <div class="col-7">
-                <p>Ante Mandica 37</p>
-            </div>
-        </div>
-    </div>
-    <hr>
-    <div class="text-start">
-        <h6>Programming Languages</h6>
-        <div class="row">
-            <div class="col-5">
-                <p>Python</p>
-            </div>
-            <div class="col-7">
-                <p>bar</p>
+            <div class="user-creds col-8 pt-1 align-self-center">
+                <h4 id="user-first-last-name">Tomislav Vesic</h4>
+                <h6 id="user-title">Software engineer</h6>
             </div>
         </div>
-    </div>
-    <hr>
-    <div class="text-start">
-        <h6>Other Skills</h6>
-        <div class="row">
-            <div class="col-5">
-                <p>English</p>
+        <hr>
+        <div>
+            <div *ngIf="personalInfoMenu.personalInfo;else personalInfoCollapsed">
+                <button class="btn" (click)="personalInfoMenu.personalInfo = !personalInfoMenu.personalInfo">
+                    <h6>Personal Info</h6>
+                </button>
+                <div class="text-start">
+                    <div class="row" *ngFor="let info of personalInfo">
+                        <div class="col-5">
+                            <p>{{info.key}}</p>
+                        </div>
+                        <div class="col-7">
+                            <p>{{info.value}}</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-7">
-                <p>bar</p>
+            <div *ngIf="personalInfoMenu.programmingLanguages;else languagesCollapsed">
+                <button class="btn"
+                    (click)="personalInfoMenu.programmingLanguages = !personalInfoMenu.programmingLanguages">
+                    <h6>Programming Languages</h6>
+                </button>
+                <div class="text-start">
+                    <div class="row" *ngFor="let language of programmingLanguages">
+                        <div class="col-5">
+                            <p>{{language.name}}</p>
+                        </div>
+                        <div class="col-7">
+                            <p>{{language.skill}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="personalInfoMenu.otherSkills;else otherSkillsCollapsed">
+                <button class="btn" (click)="personalInfoMenu.otherSkills = !personalInfoMenu.otherSkills">
+                    <h6>Other Skills</h6>
+                </button>
+                <div class="text-start">
+                    <div class="row" *ngFor="let skill of otherSkills">
+                        <div class="col-5">
+                            <p>{{skill.name}}</p>
+                        </div>
+                        <div class="col-7">
+                            <p>{{skill.skill}}</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <ng-template #personalInfoCollapsed>
+            <button class="btn" (click)="personalInfoMenu.personalInfo = !personalInfoMenu.personalInfo">
+                Personal Info
+            </button>
+        </ng-template>
+        <ng-template #languagesCollapsed>
+            <button class="btn"
+                (click)="personalInfoMenu.programmingLanguages = !personalInfoMenu.programmingLanguages">
+                Programming Languages
+            </button>
+        </ng-template>
+        <ng-template #otherSkillsCollapsed>
+            <button class="btn" (click)="personalInfoMenu.otherSkills = !personalInfoMenu.otherSkills">
+                Other Skills
+            </button>
+        </ng-template>
     </div>
 </ng-container>
 

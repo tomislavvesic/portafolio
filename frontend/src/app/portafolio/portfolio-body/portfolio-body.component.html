@@ -1,0 +1,17 @@
+<div class="portfolio-body h-100">
+    <nav class="navbar mb-4" [ngClass]="chooseHeaderMode()">
+        <div class="container-fluid">
+            <p></p>
+            <form class="d-flex">
+                <button type='button' class="btn me-2" (click)="onLoadInfo()">Info</button>
+                <button type='button' class="btn me-2" (click)="onLoadProjects()">Projects</button>
+                <button type='button' class="btn me-2" (click)="onLoadContact()">Contact</button>
+            </form>
+        </div>
+    </nav>
+    <div>
+        <app-portfolio-info *ngIf="displayInfo"></app-portfolio-info>
+        <app-portafolio-projects *ngIf="displayProjects"></app-portafolio-projects>
+        <app-portfolio-contact *ngIf="displayContacts"></app-portfolio-contact>
+    </div>
+</div>

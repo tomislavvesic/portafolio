@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PortafolioHeaderComponent } from './portafolio-header.component';
+import { PortafolioHeaderComponent } from './portfolio-body.component';
 
 describe('PortafolioHeaderComponent', () => {
   let component: PortafolioHeaderComponent;
@@ -8,9 +8,9 @@ describe('PortafolioHeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PortafolioHeaderComponent ]
+      declarations: [PortafolioHeaderComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

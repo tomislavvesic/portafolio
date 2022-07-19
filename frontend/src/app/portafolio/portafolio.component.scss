@@ -1,6 +1,56 @@
-.container {
-    background-color: lightblue;
-    height: 70vh;
-    margin-top: 7vh;
-    margin-bottom: 15vh;
+.main-container {
+    height: 75vh;
+    max-height: 75vh;
+    margin-top: 9vh;
+    margin-bottom: 16vh;
+    border-radius: 10px;
+
+    .personal-info {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        overflow: auto;
+    }
+
+    .portfolio-body {
+        border-bottom-right-radius: 15px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .color-info-mode-white {
+        background-color: white;
+    }
+
+    .color-info-mode-dark {
+        color: #fff;
+        background-color: #222;
+        border: inset 1px white;
+    }
+
+    .color-body-mode-dark {
+        color: white;
+        background-color: #333;
+        border: inset 1px white;
+    }
+
+    /* -------- scrollbar decorators -------- */
+    ::-webkit-scrollbar {
+        width: 1px;
+    }
+
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: white;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: white;
+    }
+
+    /* -------- scrollbar decorators -------- */
 }

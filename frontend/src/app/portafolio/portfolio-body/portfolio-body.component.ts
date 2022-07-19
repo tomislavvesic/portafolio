@@ -1,10 +1,10 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-portafolio-header',
-  templateUrl: './portafolio-header.component.html',
-  styleUrls: ['./portafolio-header.component.scss']
+  selector: 'app-portfolio-body',
+  templateUrl: './portfolio-body.component.html',
+  styleUrls: ['./portfolio-body.component.scss']
 })
 export class PortafolioHeaderComponent implements OnInit {
   displayInfo: boolean = true;
@@ -30,8 +30,11 @@ export class PortafolioHeaderComponent implements OnInit {
   onLoadContact() {
     this.displayInfo = false;
     this.displayProjects = false;
-    this.displayInfo = true;
+    this.displayContacts = true;
   }
 
+  chooseHeaderMode() {
+    return 'color-header-mode-dark'
+  }
 
 }
