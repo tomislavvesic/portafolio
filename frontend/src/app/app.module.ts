@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { NgxsModule } from '@ngxs/store';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -28,7 +29,8 @@ import { PortfolioContactComponent } from './portafolio/portfolio-body/portfolio
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxsModule.forRoot([])
   ],
   providers: [],
   bootstrap: [AppComponent]

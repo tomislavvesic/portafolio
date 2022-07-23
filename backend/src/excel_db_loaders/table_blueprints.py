@@ -1,3 +1,5 @@
+
+
 def get_personal_info():
     return  """ 
             CREATE TABLE personal_info (
@@ -32,3 +34,10 @@ def get_other_skills():
                 knowledge INT NOT NULL
             ); 
         """
+
+
+table_blueprints = {
+    'programming_languages':get_programming_languages,
+    'other_skills': get_other_skills,
+    'personal_info': get_personal_info
+}
