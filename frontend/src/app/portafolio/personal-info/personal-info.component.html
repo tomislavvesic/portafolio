@@ -10,18 +10,59 @@
             </div>
         </div>
         <hr>
-        <div>
-            <div *ngIf="personalInfoMenu.personalInfo;else personalInfoCollapsed">
+
+        <div class="side-dropdown-menu" *ngIf="personalInfo$ | async; else pending">
+            <div class="personal-info-dropdown" *ngIf="personalInfoMenu.personalInfo;else personalInfoCollapsed">
                 <button class="btn" (click)="personalInfoMenu.personalInfo = !personalInfoMenu.personalInfo">
                     <h6>Personal Info</h6>
                 </button>
-                <div class="text-start">
-                    <div class="row" *ngFor="let info of personalInfo">
+                <div class="personal-info-dropdown-fields">
+                    <div class="row">
                         <div class="col-5">
-                            <p>{{info.key}}</p>
+                            <p>Birth Date: </p>
                         </div>
                         <div class="col-7">
-                            <p>{{info.value}}</p>
+                            <p (click)="testfunc()">{{personalInfo.birth_date}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <p>City: </p>
+                        </div>
+                        <div class="col-7">
+                            <p>{{personalInfo.city}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <p>Country: </p>
+                        </div>
+                        <div class="col-7">
+                            <p>{{personalInfo.state}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <p>LinkedIn: </p>
+                        </div>
+                        <div class="col-7">
+                            <a [href]="personalInfo.linkedin">LinkedIn</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <p>Github: </p>
+                        </div>
+                        <div class="col-7">
+                            <a [href]="personalInfo.github">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <p>Email: </p>
+                        </div>
+                        <div class="col-7">
+                            <p>{{personalInfo.email}}</p>
                         </div>
                     </div>
                 </div>
@@ -90,4 +131,8 @@
         </div>
         <p>test</p>
     </div>
+</ng-template>
+
+<ng-template #pending>
+    <div>pending</div>
 </ng-template>

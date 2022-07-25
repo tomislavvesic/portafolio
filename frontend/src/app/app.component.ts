@@ -1,8 +1,10 @@
-import { AfterContentInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import data from "./../assets/data/particles.json"
+import { Store } from '@ngxs/store';
 
-import { HttpClient } from '@angular/common/http';
+import { PersonalInfoActions } from './core/actions/personal-info.actions';
+
+import data from "./../assets/data/particles.json"
 
 declare var particlesJS: any;
 @Component({
@@ -10,24 +12,26 @@ declare var particlesJS: any;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, AfterContentInit {
+export class AppComponent implements OnInit {
   bodyColor: string = 'color-mode-white'
 
-  constructor(public router: Router, private http: HttpClient) { }
+  constructor(public router: Router, public store: Store) { }
 
   ngOnInit(): void {
     this.chooseBodyColor()
     this.router.navigate(['portofolio']);
     particlesJS('particles-js', data, () => { console.log('callback - particles.js config loaded') });
-  }
 
-  ngAfterContentInit(): void {
-    // particlesJS('particles-js', data, () => { console.log('callback - particles.js config loaded') });
-    null
+    // Trigger states to pull API data
+    this.getPersonalData()
   }
 
 
   chooseBodyColor() {
     this.bodyColor = 'color-mode-dark'
+  }
+
+  getPersonalData() {
+    this.store.dispatch(PersonalInfoActions.GetPersonalInfoAction)
   }
 }

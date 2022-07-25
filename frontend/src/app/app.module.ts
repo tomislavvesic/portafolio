@@ -13,6 +13,7 @@ import { PortafolioProjectsComponent } from './portafolio/portfolio-body/portafo
 import { ModalComponent } from './shared/modal/modal.component';
 import { PortfolioInfoComponent } from './portafolio/portfolio-body/portfolio-info/portfolio-info.component';
 import { PortfolioContactComponent } from './portafolio/portfolio-body/portfolio-contact/portfolio-contact.component';
+import { PersonalInfoState } from './core/state/personal-info.state';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { PortfolioContactComponent } from './portafolio/portfolio-body/portfolio
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    NgxsModule.forRoot([])
+    NgxsModule.forRoot([PersonalInfoState])
   ],
   providers: [],
   bootstrap: [AppComponent]

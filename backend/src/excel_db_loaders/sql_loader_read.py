@@ -4,10 +4,12 @@ from excel_db_loaders.sql_loader_generic import GenericSqlLoader
 class SqlLoaderRead(GenericSqlLoader):
     def __init__(self):
         super().__init__()
+        
+
+    def read_all_database(self, table_name):
         self.connect_to_db()
         self.create_cursor()
 
-    def read_all_database(self, table_name):
         statement = f'SELECT * FROM {table_name}'
         print(statement)
         self.sql_cursor.execute(statement)
@@ -19,12 +21,16 @@ class SqlLoaderRead(GenericSqlLoader):
         
     
     def retreive_user_info(self):
+        self.connect_to_db()
+        self.create_cursor()
+
         statement = f'SELECT * FROM personal_info'
         self.sql_cursor.execute(statement)
 
         all_executed_data = self.sql_cursor.fetchall()
+        query_result = {}
         for row in all_executed_data:
-            query_result = {
+            query_result["personal_info"] = {
                 "first_name": row[0],
                 "last_name": row[1],
                 "email": row[2],
@@ -41,6 +47,9 @@ class SqlLoaderRead(GenericSqlLoader):
         return query_result
     
     def retreive_programming_languages(self):
+        self.connect_to_db()
+        self.create_cursor()
+
         statement = f'SELECT * FROM programming_languages'
         self.sql_cursor.execute(statement)
         

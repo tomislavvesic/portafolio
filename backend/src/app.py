@@ -2,7 +2,7 @@ from flask import Flask
 from flask_cors import CORS
 from routes.get_routes import GetRoutes
 
-app = Flask("__main__")
+app = Flask(__name__)
 CORS(app)
 
 get_routes = GetRoutes()

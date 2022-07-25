@@ -19,4 +19,12 @@
     p {
         margin-bottom: 0.35rem;
     }
+
+    .side-dropdown-menu {
+        .personal-info-dropdown {
+            .personal-info-dropdown-fields {
+                word-break: break-all
+            }
+        }
+    }
 }

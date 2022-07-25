@@ -1,0 +1,2 @@
+* Replace all prints with logger statements
+* Untill we get API data, we display component called pending which is created by ng-template in each repo. Make "pending" global and reusable

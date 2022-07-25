@@ -1,20 +1,14 @@
 <div class="body-tab-info">
     <div class="row">
         <div class="col-lg-2"></div>
-        <div class="summary col-lg-8">
-            <div [innerText]="portfolioInfo">
-                <p>Bacon ipsum dolor /n amet meatloaf ham turducken leberkas doner spare ribs buffalo kevin pork fatback
-                    corned
-                    beef bacon filet mignon frankfurter. Burgdoggen swine alcatra tail chislic short ribs pork loin
-                    drumstick
-                    picanha. Meatloaf picanha salami leberkas tail short loin, bresaola jowl ball tip. Tail corned beef
-                    short
-                    ribs frankfurter, sausage t-bone fatback pastrami burgdoggen turducken filet mignon drumstick.</p>
-                <p>Bacon ipsum dolor amet meatloaf ham turducken leberkas doner spare ribs buffalo kevin pork fatback
-                    corned
-                    beef bacon filet mignon frankfurter.</p>
-            </div>
+        <div class="summary col-lg-8" *ngIf="personalInfo$ | async as data; else pending">
+            <div [innerText]="data.personal_info.description"></div>
         </div>
         <div class="col-lg-2"></div>
     </div>
 </div>
+
+
+<ng-template #pending>
+    <div>pending</div>
+</ng-template>
