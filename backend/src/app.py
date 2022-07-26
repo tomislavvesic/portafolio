@@ -11,5 +11,5 @@ app.add_url_rule('/programming_languages', view_func=get_routes.get_programming_
 app.add_url_rule('/other_skills', view_func=get_routes.get_other_skills)
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run(host='0.0.0.0')
     

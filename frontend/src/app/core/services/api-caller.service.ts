@@ -13,6 +13,7 @@ export class ApiCallerService {
 
   getPersonalInfo() {
     console.log("Sending api call")
-    return this.http.get('http://127.0.0.1:5000/personal_info');
+    console.log(location.hostname)
+    return this.http.get('http://' + location.hostname + ':5000/personal_info');
   }
 }
