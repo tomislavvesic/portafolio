@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "portfolio-tomislav": {
+      "hosting": {
+        "frontend": [
+          "portfolio-tomislav"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "portfolio-tomislav"
+  }
+}

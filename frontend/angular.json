@@ -119,6 +119,16 @@
               "src/**/*.html"
             ]
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "frontend:build:production",
+            "firebaseProject": "portfolio-tomislav",
+            "firebaseHostingSite": "portfolio-tomislav"
+          }
         }
       }
     }
