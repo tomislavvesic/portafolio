@@ -7,6 +7,7 @@
     z-index: 100;
 
     .personal-info-container {
+        scrollbar-width: thin !important;
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
         overflow: auto;

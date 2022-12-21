@@ -14,12 +14,12 @@
         <div class="side-dropdown-menu" *ngIf="personalInfo$ | async; else pending">
             <div class="personal-info-dropdown" *ngIf="personalInfoMenu.personalInfo;else personalInfoCollapsed">
                 <button class="btn" (click)="personalInfoMenu.personalInfo = !personalInfoMenu.personalInfo">
-                    <h6>Personal Info</h6>
+                    Personal Info
                 </button>
                 <div class="personal-info-dropdown-fields">
                     <div class="row">
-                        <div class="col-5">
-                            <p>Birth Date: </p>
+                        <div class="col-5 pe-0">
+                            <p>Birth Date:</p>
                         </div>
                         <div class="col-7">
                             <p (click)="testfunc()">{{personalInfo.birth_date}}</p>
@@ -46,7 +46,7 @@
                             <p>LinkedIn: </p>
                         </div>
                         <div class="col-7">
-                            <a [href]="personalInfo.linkedin">LinkedIn</a>
+                            <a [href]="personalInfo.linkedin" target="_blank">LinkedIn</a>
                         </div>
                     </div>
                     <div class="row">
@@ -54,7 +54,7 @@
                             <p>Github: </p>
                         </div>
                         <div class="col-7">
-                            <a [href]="personalInfo.github">GitHub</a>
+                            <a [href]="personalInfo.github" target="_blank">GitHub</a>
                         </div>
                     </div>
                     <div class="row">
@@ -70,7 +70,7 @@
             <div *ngIf="personalInfoMenu.programmingLanguages;else languagesCollapsed">
                 <button class="btn"
                     (click)="personalInfoMenu.programmingLanguages = !personalInfoMenu.programmingLanguages">
-                    <h6>Programming Languages</h6>
+                    Programming Languages
                 </button>
                 <div class="text-start">
                     <div class="row" *ngFor="let language of programmingLanguages">
@@ -85,7 +85,7 @@
             </div>
             <div *ngIf="personalInfoMenu.otherSkills;else otherSkillsCollapsed">
                 <button class="btn" (click)="personalInfoMenu.otherSkills = !personalInfoMenu.otherSkills">
-                    <h6>Other Skills</h6>
+                    Other Skills
                 </button>
                 <div class="text-start">
                     <div class="row" *ngFor="let skill of otherSkills">

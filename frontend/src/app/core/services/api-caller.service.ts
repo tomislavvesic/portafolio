@@ -13,11 +13,9 @@ export class ApiCallerService {
   constructor(private realtimeDatabase: AngularFireDatabase, private http: HttpClient) { }
 
   getPersonalInfo() {
-    console.log("Sending api call")
-    console.log(location.hostname)
-
-    console.log("PULL DATA")
     const database_data = this.realtimeDatabase.object('/').valueChanges()
+
+    // Remove console.log
     database_data.subscribe(data => {
       console.log(data)
     })
