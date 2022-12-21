@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Store } from '@ngxs/store';
 
 import { PersonalInfoActions } from './core/actions/personal-info.actions';
@@ -15,11 +14,10 @@ declare var particlesJS: any;
 export class AppComponent implements OnInit {
   bodyColor: string = 'color-mode-white'
 
-  constructor(public router: Router, public store: Store) { }
+  constructor(public store: Store) { }
 
   ngOnInit(): void {
     this.chooseBodyColor()
-    this.router.navigate(['portofolio']);
     particlesJS('particles-js', data, () => { console.log('callback - particles.js config loaded') });
 
     // Trigger states to pull API data
