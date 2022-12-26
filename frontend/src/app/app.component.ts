@@ -4,6 +4,8 @@ import { Store } from '@ngxs/store';
 import { PersonalInfoActions } from './core/actions/personal-info.actions';
 
 import data from "./../assets/data/particles.json"
+import { faToggleOn } from '@fortawesome/free-solid-svg-icons';
+import { faToggleOff } from '@fortawesome/free-solid-svg-icons';
 
 declare var particlesJS: any;
 @Component({
@@ -13,6 +15,9 @@ declare var particlesJS: any;
 })
 export class AppComponent implements OnInit {
   bodyColor: string = 'color-mode-white'
+  faToggleOn = faToggleOn
+  faToggleOff = faToggleOff
+  toggle = false
 
   constructor(public store: Store) { }
 
@@ -25,6 +30,7 @@ export class AppComponent implements OnInit {
 
 
   changePortfolioColor() {
+    this.toggle = !this.toggle
     if (this.bodyColor === 'color-mode-dark') {
       this.bodyColor = 'color-mode-white'
     } else {

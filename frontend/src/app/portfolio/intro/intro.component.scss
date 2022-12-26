@@ -1,0 +1,31 @@
+.intro-comp {
+    width: 100%;
+    height: 85%;
+    position: absolute;
+    overflow: hidden;
+
+    h1 {
+        font-size: 4vw;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    h5 {
+        font-size: 1.3vw;
+        font-weight: 400;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .intro-comp {
+        h1 {
+            font-size: 4.5vh;
+        }
+
+        h5 {
+            // font-size: medium;
+            font-size: 2vh;
+        }
+    }
+}
