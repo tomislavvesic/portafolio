@@ -1,17 +1,46 @@
-<div class="app-container">
+<div class="app-container" [ngClass]="bodyColor">
+    <nav class="navbar navbar-expand-lg navbar-light"
+        style="width: 96%; margin: 0px 2%; background-color: transparent; position: absolute; border-bottom: 1px solid black;">
+        <a class="navbar-brand" href="#">Logo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#info">Info<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+            <span class="navbar-text" style="position:absolute; float: right; right: 60px;">
+                <span style="margin-right: 10px;">Change Color Mode: </span><button class="btn btn-success"
+                    (click)="changePortfolioColor()">Dark
+                    Mode</button>
+            </span>
+        </div>
+    </nav>
     <div class="intro">
 
     </div>
-    <div class="info">
+    <div class="info" id="info">
         <p>test</p>
     </div>
-    <div class="skills">
+    <div class="skills" id="skills">
 
     </div>
-    <div class="projects">
+    <div class="projects" id="projects">
 
     </div>
-    <div class="contact">
+    <div class="contact" id="contact">
 
     </div>
 </div>

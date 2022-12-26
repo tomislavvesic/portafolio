@@ -17,7 +17,6 @@ export class AppComponent implements OnInit {
   constructor(public store: Store) { }
 
   ngOnInit(): void {
-    this.chooseBodyColor()
     particlesJS('particles-js', data, () => { console.log('callback - particles.js config loaded') });
 
     // Trigger states to pull API data
@@ -25,8 +24,12 @@ export class AppComponent implements OnInit {
   }
 
 
-  chooseBodyColor() {
-    this.bodyColor = 'color-mode-dark'
+  changePortfolioColor() {
+    if (this.bodyColor === 'color-mode-dark') {
+      this.bodyColor = 'color-mode-white'
+    } else {
+      this.bodyColor = 'color-mode-dark'
+    }
   }
 
   getPersonalData() {

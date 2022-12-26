@@ -1,9 +1,75 @@
-.app-container {
-    .intro {
-        height: 100vh;
-        width: 100vw;
-        background-color: black;
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body,
+.app-container,
+#particles-js,
+#portfolio {
+    margin: 0px;
+    padding: 0px;
+
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+
+    ::-webkit-scrollbar {
+        width: 7px;
+        z-index: -100;
+    }
+
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: gray;
+        border-radius: 10px;
     }
 }
 
 // Used to toggle white/dark mode
+
+.color-mode-dark {
+    .intro {
+        background-color: black;
+    }
+
+    .info {
+        background-color: blue;
+    }
+
+    .skills {
+        background-color: navy;
+    }
+
+    .projects {
+        background-color: blue;
+    }
+
+    .contact {
+        background-color: navy;
+    }
+}
+
+.color-mode-white {
+    .intro {
+        background-color: gray;
+    }
+
+    .info {
+        background-color: white;
+    }
+
+    .skills {
+        background-color: lightblue;
+    }
+
+    .projects {
+        background-color: white;
+    }
+
+    .contact {
+        background-color: lightblue;
+    }
+}
