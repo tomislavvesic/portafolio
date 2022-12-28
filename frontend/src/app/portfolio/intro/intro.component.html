@@ -1,10 +1,6 @@
-<div class="intro-comp d-flex flex-column justify-content-center align-items-center">
+<div class="intro-comp d-flex flex-column justify-content-center align-items-center"
+    *ngIf="personalInfo$ | async as personalInfo">
     <h1>Welcome and kind regards!</h1>
-    <h5 class="w-75" style="white-space: pre-line;">
-        Good day everyone and welcome to my portfolio. My name is Tomislav and I have been web developer for ~3
-        years. My focus have using Angular as a frontend and Python as a backend solution. <br> In here you can find
-        some
-        basic info about me and projects I am usually workon on in my free time. Don't get blown away with all these
-        awesome ideas. Feel free to contact me if you want to give me a tumbs up!
+    <h5 class="w-75" style='white-space: pre-wrap' [innerHTML]='personalInfo?.info?.description'>
     </h5>
 </div>

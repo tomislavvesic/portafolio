@@ -8,7 +8,10 @@
         margin: 0px 2%;
         position: absolute;
         z-index: 10000;
-        background-color: transparent;
+
+        .navbar-brand {
+            margin-top: -3px;
+        }
 
         .navbar-text {
             position: absolute;
@@ -32,22 +35,22 @@
     }
 
     .info {
-        min-height: 450px;
+        min-height: 550px;
         width: 100vw;
     }
 
     .skills {
-        min-height: 450px;
+        min-height: 550px;
         width: 100vw;
     }
 
     .projects {
-        min-height: 450px;
+        min-height: 550px;
         width: 100vw;
     }
 
     .contact {
-        min-height: 450px;
+        min-height: 550px;
         width: 100vw;
     }
 }

@@ -14,13 +14,15 @@ import { environment } from '../environments/environment';
 import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { IntroComponent } from './portfolio/intro/intro.component';
 import { InfoComponent } from './portfolio/info/info.component';
+import { SkillsComponent } from './portfolio/skills/skills.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     IntroComponent,
-    InfoComponent
+    InfoComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,

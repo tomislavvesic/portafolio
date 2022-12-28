@@ -35,7 +35,7 @@ export class PersonalInfoState {
       error_message: null,
     });
     return this.apiService.getPersonalInfo().pipe(
-      tap(data => {
+      tap((data: any) => {
         setState({
           ...state,
           personal_info: data,

@@ -30,50 +30,106 @@ body,
 // Used to toggle white/dark mode
 
 .color-mode-dark {
+    background-color: black;
+
     nav.navbar {
-        border-bottom: 1px solid white;
+        background-color: transparent;
+        border-bottom: 1px solid #eee;
+
+        .navbar-toggler {
+            background-color: rgba(230, 230, 230, 0.8);
+        }
+
+        a {
+            color: #eee;
+        }
+
+        .toggle-text {
+            color: #eee;
+        }
 
         .toggle-icons {
             .fa-toggle-on {
-                color: white;
+                color: #eee;
             }
         }
     }
 
     .intro {
-        background-color: black;
+        background-image: linear-gradient(rgba(0, 0, 0, 1) 0%,
+                rgba(0, 0, 0, 1) 90%,
+                rgba(33, 33, 33, 1) 100%);
+
+        .intro-comp {
+
+            h1,
+            h5 {
+                color: #eee;
+            }
+        }
     }
 
     .info {
-        background-color: blue;
+        background-image: linear-gradient(rgba(33, 33, 33, 1) 0%,
+                rgba(33, 33, 33, 1) 90%,
+                rgba(0, 0, 0, 1) 100%);
     }
 
     .skills {
-        background-color: navy;
+        background-image: linear-gradient(rgba(0, 0, 0, 1) 0%,
+                rgba(0, 0, 0, 1) 90%,
+                rgba(33, 33, 33, 1) 100%);
     }
 
     .projects {
-        background-color: blue;
+        background-image: linear-gradient(rgba(33, 33, 33, 1) 0%,
+                rgba(33, 33, 33, 1) 90%,
+                rgba(0, 0, 0, 1) 100%);
     }
 
     .contact {
-        background-color: navy;
+        background-image: linear-gradient(rgba(0, 0, 0, 1) 0%,
+                rgba(0, 0, 0, 1) 90%,
+                rgba(0, 0, 0, 1) 100%);
     }
 }
 
 .color-mode-white {
+    background-color: white;
+
     nav.navbar {
+        background-color: transparent;
         border-bottom: 1px solid black;
+
+        .navbar-toggler {
+            background-color: transparent;
+        }
+
+        a {
+            color: #222;
+        }
+
+        .toggle-text {
+            color: #222;
+        }
 
         .toggle-icons {
             .fa-toggle-off {
-                color: 222;
+                color: #222;
             }
         }
     }
 
     .intro {
         background-color: gray;
+
+        .intro-comp {
+
+            h1,
+            h5 {
+                color: #222;
+            }
+        }
     }
 
     .info {
