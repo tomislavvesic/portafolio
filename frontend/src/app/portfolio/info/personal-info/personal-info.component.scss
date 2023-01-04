@@ -1,0 +1,26 @@
+.info-component {
+    min-height: 500px;
+    border: 1px solid black;
+    border-radius: 20px;
+
+    .personal-info {
+        text-align: center;
+
+        .personal-info-summary {
+            h6 {
+                margin-bottom: 0px;
+            }
+
+            span {
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .about-me {
+        text-align: center;
+        // p {
+        //     white-space: pre-wrap
+        // }
+    }
+}

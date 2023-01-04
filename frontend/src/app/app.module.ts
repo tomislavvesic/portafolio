@@ -15,6 +15,8 @@ import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { IntroComponent } from './portfolio/intro/intro.component';
 import { InfoComponent } from './portfolio/info/info.component';
 import { SkillsComponent } from './portfolio/skills/skills.component';
+import { PersonalInfoComponent } from './portfolio/info/personal-info/personal-info.component';
+import { ExperienceComponent } from './portfolio/info/experience/experience.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { SkillsComponent } from './portfolio/skills/skills.component';
     AppComponent,
     IntroComponent,
     InfoComponent,
-    SkillsComponent
+    SkillsComponent,
+    PersonalInfoComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,

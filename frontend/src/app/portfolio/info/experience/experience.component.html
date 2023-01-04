@@ -1,0 +1,29 @@
+<div class="experience p-3" *ngIf="personalInfo$ | async as personalInfo">
+    <div class="mb-5">
+        <div class="mb-2">
+            <h4 class="d-inline">Company: </h4>
+            <div class="d-inline dropdown">
+                <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false" style="border: 1px solid black; border-radius: 5px;">
+                    <h6 class="d-inline p-1 me-1">{{chosenExperience}}</h6>
+                    <p class="d-inline"><i>(2019-2021)</i></p>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <div *ngFor="let item of personalInfo?.experience | keyvalue">
+                        <li><a class="dropdown-item" href="#intro" (click)="chooseExperience(item.key)">{{item.key}}</a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div style="display: inline;" *ngFor="let item of personalInfo?.experience?.[chosenExperience] | keyvalue">
+            <button class="btn btn-success btn-sm mb-1 me-2" style="font-size: 75%; display: inline;"
+                (click)="chooseJobTitle(item.key)">{{item.key}}</button>
+        </div>
+    </div>
+    <div class="text-center p-4">
+        <h4>{{chosenJobTitle}}</h4>
+        <p innerHTML="{{personalInfo?.experience?.[chosenExperience]?.[chosenJobTitle]?.description}}"></p>
+    </div>
+
+</div>
