@@ -17,6 +17,7 @@ import { InfoComponent } from './portfolio/info/info.component';
 import { SkillsComponent } from './portfolio/skills/skills.component';
 import { PersonalInfoComponent } from './portfolio/info/personal-info/personal-info.component';
 import { ExperienceComponent } from './portfolio/info/experience/experience.component';
+import { ArrangeJobExperiencesPipe } from './shared/pipes/arrange-job-experiences.pipe';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ExperienceComponent } from './portfolio/info/experience/experience.comp
     InfoComponent,
     SkillsComponent,
     PersonalInfoComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    ArrangeJobExperiencesPipe
   ],
   imports: [
     BrowserModule,

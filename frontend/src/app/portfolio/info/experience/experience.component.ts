@@ -12,7 +12,7 @@ export class ExperienceComponent implements OnInit {
   @Select(PersonalInfoState.getPersonalInfo)
   personalInfo$!: Observable<any>;
   chosenExperience = 'iOLAP'
-  chosenJobTitle = 'Web Developer'
+  chosenJobTitle = 'General'
   constructor() { }
 
   ngOnInit(): void {
@@ -20,8 +20,8 @@ export class ExperienceComponent implements OnInit {
   }
 
   chooseExperience(input) {
-    console.log(input)
     this.chosenExperience = input
+    this.chosenJobTitle = 'General'
   }
 
   chooseJobTitle(value) {
